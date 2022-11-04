@@ -15,3 +15,25 @@ Output: "leotcede"
 */
 
 // *************** CODE GOES HERE ***************
+
+ var reverseVowels = function(s) {
+    var k = 0;
+    const a = [];
+    //converting string to an array
+    s=s.split("");
+    list1 = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+    for(var i=0; i<s.length; i++){
+        if(list1.includes(s[i])){
+            a.push(s[i]);
+            k++;
+        }
+    }
+    for(var j=0; j<s.length; j++){
+        if(list1.includes(s[j])){
+        s[j] = a[--k];
+    }
+        
+    }
+    //returning joined string
+    return(s.join(""))
+}
