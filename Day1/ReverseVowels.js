@@ -37,3 +37,9 @@ Output: "leotcede"
     //returning joined string
     return(s.join(""))
 }
+var readline = require("readline")
+var read = readline.createInterface(process.stdin, process.stdout)
+read.question("Enter the word of which you want to reverse the vowels ",(word)=>{
+    console.log("The word is ",reverseVowels(word));
+    read.close();
+})
