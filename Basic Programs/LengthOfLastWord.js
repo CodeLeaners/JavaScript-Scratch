@@ -30,7 +30,23 @@ var picklastWord = function(s){
 }
 var readline = require("readline")
 var read = readline.createInterface(process.stdin, process.stdout)
-read.question("Enter the word of which you want to reverse the vowels ",(word)=>{
+read.question("Enter the string of which you want to find the length of last word. ",(word)=>{
     console.log("The length is ",picklastWord(word));
+    read.close();
+})
+
+
+
+// Way 2 (learning arrow functions) 
+
+const lengthOfWord = (sentenceString) => {
+    return(sentenceString.split(" ").pop().length);
+} 
+
+
+var readline = require("readline")
+var read = readline.createInterface(process.stdin, process.stdout)
+read.question("Enter the string of which you want to find the length of last word. ",(sentenceString)=>{
+    console.log("The length is ",lengthOfWord(sentenceString));
     read.close();
 })
